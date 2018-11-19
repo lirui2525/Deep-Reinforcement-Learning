@@ -10,7 +10,7 @@ Traditional implementation of Deep Q Network with experience replay(DQN.py):
      2): NOT EASILY adopted by cases with multi-dimensional actions
   
 
-![continous-DQN for Pendulum-v0]https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/continous_DQN_structure.png
+![continous-DQN for Pendulum-v0](https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/continous_DQN_structure.png)
 
 
 ![continous-DQN for Pendulum-v0]https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/Pendulum-v0_DQN_result.png
