@@ -1,7 +1,12 @@
 """
-DDPG ---- Ornstein Uhlenbeck noise function 
+continuous DQN ---- DQN for continous action spaces
 
-Ornstein Uhlenbeck noise function is introduced from https://github.com/liampetti/DDPG
+Input layer: state s, action a.
+action choosing process: given state s, maximize( Q(s,a)  ) by continous optimization method Particle Swarm Optimization(PSO), which 
+provides sub-optimal solutions of action.
+
+The advantage of adopting PSO provides the feasibility of using DQN for solving DRL cases with continous multi-dimensional 
+action spaces.
 
 Using:
 tensorflow 1.0
@@ -27,7 +32,7 @@ EPSILON = 0.99
 EPSILON_MIN = 0.03
 DECAY_RATIO = 0.95
 A_BOUND = 2
-###############################  DDPG  ####################################
+###############################  continous_DQN  ####################################
 
 class DQN(object):
     def __init__(self, a_dim, s_dim):
