@@ -10,7 +10,18 @@ Traditional implementation of Deep Q Network with experience replay(DQN.py):
      2): NOT EASILY adopted by cases with multi-dimensional actions
   
 
-![continous-DQN for Pendulum-v0](https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/continous_DQN_structure.png)
+Continous Deep Q Network with experience replay(DQN_continous.py):
+  1. A modified version for DQN, which can be used for multi-dimensional continous action spaces;
+  2. The action-choosing process the get_q(s) function is modified by using searching-based optimization method--Particle Swarm Optimization(PSO);
+
+The network structure is:
+![Netowkr structure for continous-DQN](https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/continous_DQN_structure.png)
+The continous_DQN can be EASILY adopted by multi-dimensional cases,since actions are treated as n-dimension input.
 
 
-![continous-DQN for Pendulum-v0]https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/Pendulum-v0_DQN_result.png
+PSO introduces two main hyper-parameters (swarmsize and maxiter). Large swarmsize or maxiter may cause unacceptable training time for DQN, which is the main disadvantage.
+
+The following presents the results of continous_DQN on Pendulum-v0:
+![continous-DQN for Pendulum-v0](https://github.com/SchindlerLiang/Deep-Reinforcement-Learning/blob/master/DQN/img/Pendulum-v0_DQN_result.png)
+
+
